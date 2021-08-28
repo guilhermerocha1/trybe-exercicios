@@ -1,10 +1,10 @@
 let n = 5;
+let asteriscos = "";
 
 if (n > 1){
-    for (let lines = 1; lines<=n; lines+=1){
         
-        for (let index = 1; index<=lines; index+=1){
-            console.log("*");
-        }
+    for (let cont = 1; cont <= n; cont+=1){
+        asteriscos+="*";
+        console.log(asteriscos);
     }
 }
