@@ -1,0 +1,45 @@
+body{
+    background-color: #B0C4DE;
+}
+
+.head{
+    text-align: right;
+    font-family: sans-serif;
+    font-size: 25px;
+    color: blue;
+    top: -50px;
+}
+
+.naveger{
+    width: 100px;
+    height: 120px;
+    text-align: center;
+    background-color: #87CEEB;
+}
+
+.links-navegacao{
+    text-decoration: none;
+    line-height: 40px;
+    color: #808080;
+}
+
+.links-navegacao:hover{
+    background-color: blue;
+    padding: 5px 5px;
+    border-radius: 10%;
+    color: white;
+}
+
+h4{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    color: blue;
+    font-size: 20px;
+}
+
+.image{
+    position: absolute;
+    left: 300px;
+    top: 310px;
+    width: 300px;
+}
