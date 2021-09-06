@@ -32,13 +32,13 @@
   </head>
   <body>
     <header> 
-      <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+      <h1 id = "title-principal"class="title">Exercício 5.1 - JavaEscripito </h1>
     </header>    
     <main id = "backgroundGreen" class="main-content">
       <section id = "White"class="center-content">
-        <p>Texto padrão do nosso site</p>
-        <p id="descrition">-----</p>
-        <p>Trybe</p>
+        <p class = "MustN">Texto padrão do nosso site</p>
+        <p class = "MustN"id="descrition">-----</p>
+        <p class = "MustN">Trybe</p>
       </section>
     </main>
     <script>
@@ -59,6 +59,11 @@
       borderGreen.style.background = "rgb(76,164,109)";
       const squareWhite = document.getElementById("White");
       squareWhite.style.background = "white";
+      document.getElementById("title-principal").innerText = "Exercício 5.1 - JavaScript";
+      let contPragraphs = document.getElementsByTagName("p");
+      for (let i = 0; i<contPragraphs.length; i+=1){
+        console.log(contPragraphs[i].innerText);  
+      }
     </script>
   </body>
 </html>
