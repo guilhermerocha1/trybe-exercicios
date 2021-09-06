@@ -34,10 +34,10 @@
     <header> 
       <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
     </header>    
-    <main class="main-content">
-      <section class="center-content">
+    <main id = "backgroundGreen" class="main-content">
+      <section id = "White"class="center-content">
         <p>Texto padrão do nosso site</p>
-        <p>-----</p>
+        <p id="descrition">-----</p>
         <p>Trybe</p>
       </section>
     </main>
@@ -54,6 +54,11 @@
  Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
+      document.getElementById("descrition").innerText = "Me vejo trabalhando com tecnologia, falando um bom inglês";
+      const borderGreen = document.getElementById("backgroundGreen");
+      borderGreen.style.background = "rgb(76,164,109)";
+      const squareWhite = document.getElementById("White");
+      squareWhite.style.background = "white";
     </script>
   </body>
 </html>
