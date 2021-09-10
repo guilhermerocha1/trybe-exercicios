@@ -78,12 +78,16 @@
             <li>dez</li>
         </ul>
       </section>
-      <h3>Melhor Site do mundo</h3>
-      <h3>Exercício legal</h3>
-      <h3>rsrsrs</h3>
+      <h3 class="description">Melhor Site do mundo</h3>
+      <h3 class="description">Exercício legal</h3>
+      <h3 class="description">rsrsrs</h3>
     </main>
     <script>
       // COLOQUE SEU CÓDIGO AQUI
+      let sectionLeft = document.querySelector(".left-content");
+      let mainSection = document.querySelector(".main-content");
+      mainSection.removeChild(sectionLeft);
+      let sectionRight = document.getElementsByClassName(".righet-content");
     </script>
   </body>
 </html>
