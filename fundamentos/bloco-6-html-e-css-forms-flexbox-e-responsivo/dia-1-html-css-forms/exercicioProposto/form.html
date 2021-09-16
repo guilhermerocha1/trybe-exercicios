@@ -11,33 +11,45 @@
     <h1>Cadastro de currículo</h1>
   </header>
   <main>
-    <fieldset> <h2>Digite seus dados</h2>
-      <p>Nome</p>
-      <input type="text" name="name-user" id="name" required placeholder="Digite seu nome">
-      <p>Email</p>
-      <input type="email" name="email-user" id="email" required placeholder="Digite seu E-mail">
-      <p>CPF</p>
-      <input type="text" name="cpf-user" id="cpf" required placeholder="Digite seu CPF">
-      <br>
-      <br>
-      <label for="endereco">Endereço: 
-        <input type="text" name="endereco-user" id="endereco" required placeholder="Digite seu endereco">
-      </label>
-      <label for="casa">Casa
-        <input type="radio" id="casa" name="house">
-      </label>
-      <label for="apartamento">Apartamento
-        <input type="radio" id="apartamento" name="house">
-      </label>
-      <br>
-      <br>
-      <label for="cidade">Cidade: 
-        <input type="text" name="city-user" id="cidade" required>
-      </label>
-      <label for="estado">Estado: 
-        <select name="EstadosBrazil" id="estados"></select>
-      </label>
-    </fieldset>
+    <form action="" method="GET">
+      <fieldset> <h2>Digite seus dados</h2>
+        <label for="name">Nome Completo
+          <input type="text" name="name-user" id="name" required placeholder="Digite seu nome" maxlength="40">
+        </label>
+        <br>
+        <br>
+        <label for="email">Email
+          <input type="email" name="email-user" id="email" required placeholder="Digite seu E-mail" maxlength="50">
+        </label>
+        <br>
+        <br>
+        <label for="cpf">CPF
+          <input type="text" name="cpf-user" id="cpf" required placeholder="Digite seu CPF" maxlength="11">
+        </label>
+        <br>
+        <br>
+        <label for="endereco">Endereço: 
+          <input type="text" name="endereco-user" id="endereco" required placeholder="Digite seu endereco" maxlength="200">
+        </label>
+        <label for="casa">Casa
+          <input type="radio" id="casa" name="house">
+        </label>
+        <label for="apartamento">Apartamento
+          <input type="radio" id="apartamento" name="house">
+        </label>
+        <br>
+        <br>
+        <label for="cidade">Cidade: 
+          <input type="text" name="city-user" id="cidade" required maxlength="28">
+        </label>
+        <label for="estado">Estado: 
+          <select name="EstadosBrazil" id="estados" required></select>
+        </label>
+        <br>
+        <br>
+      </fieldset>
+    </form>
   </main>
+  <script src="script.js"></script>
 </body>
 </html>
