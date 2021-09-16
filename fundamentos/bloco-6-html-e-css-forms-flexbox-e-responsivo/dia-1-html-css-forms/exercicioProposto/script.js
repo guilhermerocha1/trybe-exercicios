@@ -12,5 +12,9 @@ function ContadorEstados(){
     AddOpition.innerText = estadosArray[index];
   }
 }
+const button = document.querySelector("#button-enviar")
 
+button.addEventListener('click', function(event){
+  event.preventDefault();
+})
 estadosId.addEventListener('click', ContadorEstados());
