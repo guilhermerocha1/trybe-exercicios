@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1>Cadastro de currículo</h1>
+  </header>
+  <main>
+    <form action="" method="GET">
+      <fieldset> <h2>Digite seus dados</h2>
+        <label for="name">Nome Completo
+          <input type="text" name="name-user" id="name" required placeholder="Digite seu nome" maxlength="40">
+        </label>
+        <br>
+        <br>
+        <label for="email">Email
+          <input type="email" name="email-user" id="email" required placeholder="Digite seu E-mail" maxlength="50">
+        </label>
+        <br>
+        <br>
+        <label for="cpf">CPF
+          <input type="text" name="cpf-user" id="cpf" required placeholder="Digite seu CPF" maxlength="11">
+        </label>
+        <br>
+        <br>
+        <label for="endereco">Endereço: 
+          <input type="text" name="endereco-user" id="endereco" required placeholder="Digite seu endereco" maxlength="200">
+        </label>
+        <label for="casa">Casa
+          <input type="radio" id="casa" name="house">
+        </label>
+        <label for="apartamento">Apartamento
+          <input type="radio" id="apartamento" name="house">
+        </label>
+        <br>
+        <br>
+        <label for="cidade">Cidade: 
+          <input type="text" name="city-user" id="cidade" required maxlength="28">
+        </label>
+        <label for="estado">Estado: 
+          <select name="EstadosBrazil" id="estados" required></select>
+        </label>
+        <br>
+        <br>
+      </fieldset>
+      <br>
+      <fieldset>
+        <label for="areaResumo">Resumo do currículo:
+          <textarea name="resumo" id="areaResumo" cols="30" rows="10" maxlength="1000" required placeholder="Faço um pequeno resumo do currículo"></textarea>
+        </label>
+        <br>
+        <br>
+        <label for="">Cargo:
+          <input type="text" name="cargo-user" id="cargo" maxlength="40"required>
+        </label>
+        <br>
+        <br>
+        <label for="descrition">Descrição do cargo:
+          <input type="text" name="descrition-user" id="descrition" maxlength="500" required>
+        </label>
+        <br>
+        <br>
+        <label for="date">Data Nacimento
+          <input type="date" id="date" name="date-nacs" required max="31-12-2021">
+        </label>
+      </fieldset>
+      <button id="button-enviar">Enviar</button>
+      <button>Clear</button>
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
