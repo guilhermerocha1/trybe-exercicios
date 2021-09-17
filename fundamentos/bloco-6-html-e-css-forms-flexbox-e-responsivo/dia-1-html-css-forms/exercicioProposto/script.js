@@ -18,13 +18,4 @@ button.addEventListener('click', function(event){
   event.preventDefault();
 })
 
-const inputs = document.querySelector('input')
-
-function Limpandoinputs(){
-  for(let index = 0; index < inputs.length; index += 1){
-    inputs[index].value = '';
-  }
-}
-
-inputs.addEventListener('click', Limpandoinputs)
 estadosId.addEventListener('click', ContadorEstados());

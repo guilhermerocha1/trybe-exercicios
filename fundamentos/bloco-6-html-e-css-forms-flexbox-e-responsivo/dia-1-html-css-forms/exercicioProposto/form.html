@@ -9,53 +9,55 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="d-flex justify-content-center">
+  <div class="d-flex justify-content-center cabecalho">
     <header>
       <h1>Cadastro de currículo</h1>
     </header>
   </div>
   <main>
     <form action="" method="GET">
-      <fieldset> <h2>Digite seus dados</h2>
-        <label class="form-label" for="name">Nome Completo </label>
-        <input type="text" class="form-control" name="name-user" id="name" required placeholder="Digite seu nome" maxlength="40">
+      <div class="container">
+        <fieldset> <h2>Digite seus dados</h2>
+          <label class="form-label" for="name">Nome Completo </label>
+          <input type="text" class="form-control" name="name-user" id="name" required placeholder="Digite seu nome" maxlength="40">
 
-        <label class="form-label" for="email">Email </label>
-        <input type="email" class="form-control" name="email-user" id="email" required placeholder="Digite seu E-mail" maxlength="50">
+          <label class="form-label" for="email">Email </label>
+          <input type="email" class="form-control" name="email-user" id="email" required placeholder="Digite seu E-mail" maxlength="50">
 
-        <label for="cpf" class="form-label">CPF </label>
-        <input type="text" class="form-control" name="cpf-user" id="cpf" required placeholder="Digite seu CPF" maxlength="11">
+          <label for="cpf" class="form-label">CPF </label>
+          <input type="text" class="form-control" name="cpf-user" id="cpf" required placeholder="Digite seu CPF" maxlength="11">
 
-        <label for="endereco" class="form-label">Endereço: </label>
-        <input type="text" class="form-control" name="endereco-user" id="endereco" required placeholder="Digite seu endereco" maxlength="200">
-        <div>
-          <label for="casa">Casa </label>
-          <input type="radio" id="casa" name="house">
-          <label for="apartamento">Apartamento </label>
-          <input type="radio" id="apartamento" name="house">
-        </div>
+          <label for="endereco" class="form-label">Endereço: </label>
+          <input type="text" class="form-control" name="endereco-user" id="endereco" required placeholder="Digite seu endereco" maxlength="200">
+          <div>
+            <label for="casa">Casa </label>
+            <input type="radio" id="casa" name="house">
+            <label for="apartamento">Apartamento </label>
+            <input type="radio" id="apartamento" name="house">
+          </div>
+          <br>
+          <label for="cidade" class="form-label">Cidade </label>
+          <input type="text" class="form-control" name="city-user" id="cidade" required maxlength="28">
+
+          <label for="estado" class="form-label">Estado:</label> 
+          <select class="form-select" name="EstadosBrazil" id="estados" required></select>
+        </fieldset>
         <br>
-        <label for="cidade" class="form-label">Cidade </label>
-        <input type="text" class="form-control" name="city-user" id="cidade" required maxlength="28">
+        <fieldset>
+          <label for="areaResumo">Resumo do currículo </label>
+          <textarea name="resumo" id="areaResumo" class="form-control" cols="30" rows="10" maxlength="1000" required placeholder="Faço um pequeno resumo do currículo"></textarea>
 
-        <label for="estado" class="form-label">Estado:</label> 
-        <select class="form-select" name="EstadosBrazil" id="estados" required></select>
-      </fieldset>
-      <br>
-      <fieldset>
-        <label for="areaResumo">Resumo do currículo </label>
-        <textarea name="resumo" id="areaResumo" class="form-control" cols="30" rows="10" maxlength="1000" required placeholder="Faço um pequeno resumo do currículo"></textarea>
+          <label for="">Cargo </label>
+          <input type="text" name="cargo-user" class="form-control" id="cargo" maxlength="40"required>
 
-        <label for="">Cargo </label>
-        <input type="text" name="cargo-user" class="form-control" id="cargo" maxlength="40"required>
+          <label for="descrition">Descrição do cargo: </label>
+          <input type="text" name="descrition-user" class="form-control" id="descrition" maxlength="500" required>
 
-        <label for="descrition">Descrição do cargo: </label>
-        <input type="text" name="descrition-user" class="form-control" id="descrition" maxlength="500" required>
+          <label for="date">Data Nacimento </label>
+          <input type="date" id="date" name="date-nacs" class="form-control" required max="31-12-2021">
 
-        <label for="date">Data Nacimento </label>
-        <input type="date" id="date" name="date-nacs" class="form-control" required max="31-12-2021">
-
-      </fieldset>
+        </fieldset>
+      </div>
       <div class="button">
         <button class="btn btn-success" id="button-enviar">Enviar</button>
         <button class="btn btn-info" >Limpar</button>
