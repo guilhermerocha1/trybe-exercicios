@@ -18,4 +18,6 @@ button.addEventListener('click', function(event){
   event.preventDefault();
 })
 
+document.getElementById('date').DatePickerX.titleFormatDay();
+
 estadosId.addEventListener('click', ContadorEstados());
