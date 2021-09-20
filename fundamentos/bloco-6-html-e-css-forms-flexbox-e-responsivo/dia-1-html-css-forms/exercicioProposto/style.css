@@ -1,0 +1,20 @@
+.button{
+  padding: 30px;
+  text-align: center;
+}
+
+.cabecalho{
+  padding: 20px;
+  text-align: center;
+}
+
+.container{
+  background-color: antiquewhite;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+h2{
+  text-align: center;
+  margin: 0;
+}
