@@ -1,15 +1,15 @@
-function msg() {
-  return "Acordando!!";
+const acorda = () => {
+  return 'Acordando!!';
 }
 
-function cafe() {
-  return "Bora tomar café!!";
+const cafe = () => {
+  return 'Bora tomar café!!';
 }
 
-function dormir() {
-  return "Partiu dormir!!";
+const dormir = () => {
+  return 'Partiu dormir!!';
 }
 
-const doingThings = (func) => func(msg, cafe, dormir);
+const doingThings;
 
-console.log(doingThings(cafe));
+doingThings(dormir);
