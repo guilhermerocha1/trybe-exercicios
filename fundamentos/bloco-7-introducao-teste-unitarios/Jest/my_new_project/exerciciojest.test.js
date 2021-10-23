@@ -1,4 +1,4 @@
-const { sum, myRemove, myFizzBuzz } = require('./exerciciojest.js');
+const { sum, myRemove, myFizzBuzz, encode, decode } = require('./exerciciojest.js');
 
 describe('Teste soma números', () => {
   it ('Somando 4 + 5', () => {
@@ -29,18 +29,32 @@ describe('Verificando array [1, 2, 3, 4]', () => {
 
 describe('Verificando divisibilidade de números', () => {
   it ('Verificando se o número é divisivel por 3 é 5', () => {
-    expect(myFizzBuzz(15)).toBe('fizz');
+    expect(myFizzBuzz(15)).toBe('fizzbuzz');
   })
 
   it ('Verificando se o número é divisivel por 3', () => {
-    expect(myFizzBuzz(6)).toBe('buzz');
+    expect(myFizzBuzz(6)).toBe('fizz');
   })
 
   it ('Verificando se o número é divisivel por 5', () => {
     expect(myFizzBuzz(10)).toBe('buzz');
   })
 
-  it ('Número não divisivel por 3 nem 5', () => {
+  it ('Número não divisivel por 3 nem 5 ou não seja um número', () => {
     expect(myFizzBuzz(0)).toBeFalsy();
+  })
+
+  it ('Verifica retornando uma letra', () => {
+    expect(myFizzBuzz("a")).toBeFalsy();
+  })
+})
+
+describe('Decodificando e codificando vogais é números', () => {
+  it ('Verificando se encode e decode é uma função', () => {
+    expect(encode() && decode()).toBe('fuction');
+  })
+
+  it ('Verificando se encode decodifica vogais', () => {
+    expect(encode(['a', 'e', 'i', 'o', 'u'])).toEqual([1, 2, 3, 4, 5]);
   })
 })
