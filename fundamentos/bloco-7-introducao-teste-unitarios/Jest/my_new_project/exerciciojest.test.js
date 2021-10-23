@@ -1,4 +1,4 @@
-const { sum, myRemove } = require('./exerciciojest.js');
+const { sum, myRemove, myFizzBuzz } = require('./exerciciojest.js');
 
 describe('Teste soma números', () => {
   it ('Somando 4 + 5', () => {
@@ -26,3 +26,21 @@ describe('Verificando array [1, 2, 3, 4]', () => {
     expect(myRemove([1, 2, 3, 4], 5)).toEqual([1, 2, 3, 4]);
   })
 });
+
+describe('Verificando divisibilidade de números', () => {
+  it ('Verificando se o número é divisivel por 3 é 5', () => {
+    expect(myFizzBuzz(15)).toBe('fizz');
+  })
+
+  it ('Verificando se o número é divisivel por 3', () => {
+    expect(myFizzBuzz(6)).toBe('buzz');
+  })
+
+  it ('Verificando se o número é divisivel por 5', () => {
+    expect(myFizzBuzz(10)).toBe('buzz');
+  })
+
+  it ('Número não divisivel por 3 nem 5', () => {
+    expect(myFizzBuzz(0)).toBeFalsy();
+  })
+})
