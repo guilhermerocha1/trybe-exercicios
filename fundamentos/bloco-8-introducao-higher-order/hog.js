@@ -10,6 +10,8 @@ const dormir = () => {
   return 'Partiu dormir!!';
 }
 
-const doingThings;
+const doingThings = (frase) => {
+  console.log(frase());
+};
 
 doingThings(dormir);
