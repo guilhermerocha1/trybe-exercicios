@@ -6,7 +6,7 @@ class Task extends React.Component{
     const arrayList = ['Fazer exercicio', 'Ouvir audiobook', 'terminar projeto'];
 
     return (
-      <ul>
+      <ul class = 'listTask'>
         {arrayList.map((task) => {
           return (
             <li>{task}</li>
