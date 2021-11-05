@@ -37,7 +37,11 @@
   }
 }
 
-.listTask {
-  list-style-type: none;
-  color: green;
+main {
+  background-color: silver;
+}
+
+.end {
+  background-color: darkslategray;
+  padding: 20%;
 }
