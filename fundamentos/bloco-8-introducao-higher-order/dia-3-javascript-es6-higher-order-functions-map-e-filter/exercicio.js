@@ -91,9 +91,9 @@ function oldBooksOrdered() {
   // escreva seu código aqui
   // filtrar os livros com mais de 60 anos de publicação e ordenar em ordem decrecente
   return books.filter((callback) => (
-    callback.releaseYear < 2021 - 60
+    2021 - callback.releaseYear > 60
   ))
   .sort((a, b) => a.releaseYear - b.releaseYear);
 }
 
-console.log(fantasyOrScienceFiction());
+console.log(oldBooksOrdered());
