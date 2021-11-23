@@ -96,4 +96,12 @@ function oldBooksOrdered() {
   .sort((a, b) => a.releaseYear - b.releaseYear);
 }
 
-console.log(oldBooksOrdered());
+function fantasyOrScienceFictionAuthors() {
+  // escreva seu código aqui
+  // Filtrar nome dos autores com genero fantasia e ficção cientifica
+  return books.filter((author) => (
+    author.genre === 'Fantasia' || author.genre === 'Ficção Científica'
+  )).map((nameAuthor) => nameAuthor.author.name).sort();
+}
+
+console.log(fantasyOrScienceFictionAuthors());
