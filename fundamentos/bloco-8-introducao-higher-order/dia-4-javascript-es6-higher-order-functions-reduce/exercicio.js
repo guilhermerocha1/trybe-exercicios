@@ -66,7 +66,7 @@ const books = [
 function reduceNames() {
   // escreva seu código aqui
   // Cria uma string com o nome de todas as pessoas autoras
-  return books.reduce((arr, nome) => (`${nome.author.name + arr}`));
+  return books.reduce((nome) => nome.name);
 }
 
 function averageAge() {
@@ -77,7 +77,7 @@ function averageAge() {
 
 function longestNamedBook() {
   // escreva seu código aqui
-  return books.reduce((acc, num) => {num.name });
+  return books.reduce((acc, num) => acc + num.name);
 }
 
 console.log(longestNamedBook());
