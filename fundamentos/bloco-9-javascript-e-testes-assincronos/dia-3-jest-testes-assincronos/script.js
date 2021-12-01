@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 const getSuperHero = (url) => {
   const promise = fetch(url)
     .then((response) => response.json())
-    .then((hero) => console.log(hero.name));
+    .then((hero) => hero.name);
   return promise;
 };
 
