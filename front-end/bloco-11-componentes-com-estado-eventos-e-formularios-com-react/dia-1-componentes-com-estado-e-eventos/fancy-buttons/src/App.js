@@ -1,25 +1,53 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super()
+
+    this.state = {
+      numerodeCliques: 0,
+      colors: '',
+    };
+
+    this.handleClick = this.handleClick.bind(this);
+    this.clickColorsRed = this.clickColorsRed.bind(this);
+    this.clickColorsGreen = this.clickColorsGreen.bind(this);
+    this.clickColorsYellow = this.clickColorsYellow.bind(this);
+  }
+
+  handleClick() {
+    this.setState((estadoAnt, _prop) => ({
+      numerodeCliques: estadoAnt.numerodeCliques + 1
+    }))
+  }
+
+  clickColorsRed() {
+    this.setState({ colors: 'button-red' });
+  }
+
+  clickColorsGreen() {
+    this.setState({ colors: 'button-green' });
+  }
+
+  clickColorsYellow() {
+    this.setState({ colors: 'button-yellow' });
+  }
+
+  render() {
+    return (
+      <>
+        <div className='container'>
+          <button id='button' className={this.state.colors} onClick={this.handleClick}>{this.state.numerodeCliques}</button>
+        </div>
+        <div className='container-buttons'>
+          <button onClick={this.clickColorsRed} className="buttons">Vermelho</button>
+          <button onClick={this.clickColorsGreen} className="buttons">Verde</button>
+          <button onClick={this.clickColorsYellow} className="buttons">Amarelo</button>
+        </div>
+      </>
+    )
+  }
 }
 
 export default App;

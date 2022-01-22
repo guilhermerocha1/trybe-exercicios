@@ -1,17 +1,17 @@
 import React from 'react';
 import './App.css';
-import PockemonList from './Components/pokemonList';
-import pokemons from './data';
+import Header from './components/Header.js';
+import Pokemon from './components/Pokedex.js';
+import data from './data.js'
 
 class App extends React.Component {
-  render () {
-
+  render() {
     return (
-      <div>
-        <h1>Pokedex</h1>
-        <PockemonList pokemons={pokemons}/>
-      </div>
-    );
+      <>
+        <Header />
+        <Pokemon data={data}/>
+      </>
+    )
   }
 }
 
