@@ -1,31 +1,33 @@
 const express = require('express');
-const Books = require('./models/Books');
-const bodyParser = require('body-parser');
+const booksRoute = require('./routes/booksRoute');
+const bodyParse = require('body-parser');
+const validationUser = require('./middlewares/validationUser');
+const { create, getAll, getById, isValid } = require('./models/User');
 
 const app = express();
-app.use(bodyParser.json());
+app.use(bodyParse.json());
 
-const PORT = process.env.PORT || 3001;
-
-app.get('/books/:id', async (req, res) => {
-  const { id } = req.params;
-  const books = await Books.getByAuthorId(id);
-
-  if (!books) return res.status(404).json({ message: 'Not found' });
-  res.status(200).json(books);
+app.post('/user', validationUser, async (req, res) => {
+  const { first_name, last_name, email, password } = req.body;
+  const user = await create({ first_name, last_name, email, password });
+  res.status(201).json(user);
 });
 
-app.post('/books', async (req, res) => {
-  const { title, author_id } = req.body;
+app.get('/user', async (_req, res) => {
+  const result = await getAll();
+  res.status(200).json(result);
+});
 
-  if(!Books.isValid(title, author_id)) {
-    return res.status(400).json({ message: "Dados inválidos" });
-  }
+app.get('/user/:id', async (req, res) => {
+  const { id } = req.params;
+  if (isValid(id) === true) return res.status(404).json({ message: "User Not found" });
 
-  await Books.createAuthor(title, author_id);
-  res.status(201).json({ message: "Livro criado com sucesso" });
-})
+  const result = await getById(id);
+  res.status(200).json(result[0]);
+});
 
-app.listen(PORT, () => {
-  console.log(`Ouvindo na porta ${PORT}`)
+app.use(booksRoute);
+
+app.listen(3001, () => {
+  console.log(`Ouvindo na porta 3001`);
 })
