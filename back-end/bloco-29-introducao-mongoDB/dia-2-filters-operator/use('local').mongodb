@@ -1,0 +1,19 @@
+use('local')
+
+db.hero.find({ name: 'George Lucas'})
+
+// db.hero.find({ "aspects.height": { $lt: 180 }})
+
+// db.hero.find({ "aspects.height": { $gte: 200 }})
+
+// db.hero.find({ "aspects.eyeColor": { $eq: 'blue'} })
+
+// db.hero.find({ "aspects.hairColor": { $in: [ 'Black', 'No Hair' ] } })
+
+// db.hero.find({ "aspects.hairColor": { $nin: [ 'Black', 'No Hair' ] } }).count()
+
+// db.hero.find({ $and: [{ race: { $not: { $eq: 'Human' } } }, { "aspects.height": { $not: { $gt: 180 } } }] })
+
+// db.hero.find({ $or: [{ "aspects.height": { $eq: 180} }, { "aspects.height": { $eq: 200} } ] }, { publisher: 'Marvel Comics'})
+
+// db.inventory.deleteMany({ name: 'George Lucas' })
